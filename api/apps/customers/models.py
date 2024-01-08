@@ -5,7 +5,7 @@ class Customer(models.Model):
     email = models.CharField(max_length=30, blank=False)
     cpf = models.CharField(max_length=11, blank=False, unique=True)
     rg = models.CharField(max_length=9, blank=False, unique=True)
-    celphonea = models.CharField(max_length=14)
+    celphone = models.CharField(max_length=14)
     status = models.BooleanField()
 
     def __str__(self):
