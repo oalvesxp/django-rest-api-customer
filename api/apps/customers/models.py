@@ -6,7 +6,7 @@ class Customer(models.Model):
     cpf = models.CharField(max_length=11, blank=False, unique=True)
     rg = models.CharField(max_length=9, blank=False, unique=True)
     celphone = models.CharField(max_length=14)
-    status = models.BooleanField()
+    activate = models.BooleanField()
 
     def __str__(self):
         return self.name

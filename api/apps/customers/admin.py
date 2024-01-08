@@ -8,12 +8,12 @@ class Customers(admin.ModelAdmin):
         'cpf',
         'rg',
         'celphone',
-        'status',
+        'activate',
     )
     list_display_links = ('id', 'name',)
     search_fields = ('name',)
-    list_filter = ('status',)
-    list_editable = ('status',)
+    list_filter = ('activate',)
+    list_editable = ('activate',)
     list_per_page = 10
 
 admin.site.register(Customer, Customers)
