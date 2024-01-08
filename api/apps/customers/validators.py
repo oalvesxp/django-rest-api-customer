@@ -1,22 +1,19 @@
+import re
+
+def validate_name(value):
+    return value.isalpha()
+
 def validate_cpf(value):
     return len(value) == 11
 
+def validate_rg(value):
+    return len(value) == 9
 
-# def validate_name(self, name):
-#     if not name.isalpha():
-#         raise serializers.ValidationError('Este campo não pode conter números.')
-#     return name
-
-# def validate_cpf(self, cpf):
-#     if len(cpf) != 11:
-#         raise serializers.ValidationError('O CPF deve conter 11 digitos.')
-#     return cpf
-
-# def validate_rg(self, rg):
-#     if len(rg) != 9:
-#         raise serializers.ValidationError('O RG deve conter 9 digitos.')
-#     return rg
-
+def validate_celphone(value):
+    '''Verifica se o celular é valido (XX 9XXXX-XXXX)'''
+    example = '[0-9]{2} [0-9]{5}-[0-9]{4}'
+    check = re.findall(example, value)
+    return check
 # def validate_celphone(self, celphone):
 #     if len(celphone) < 11:
 #         raise serializers.ValidationError('O número de celular deve conter o DDD exemplo: 11 99999-9999.')
