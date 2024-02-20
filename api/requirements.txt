@@ -3,11 +3,13 @@ astroid==3.0.2
 dill==0.3.7
 Django==5.0.1
 djangorestframework==3.14.0
+Faker==23.2.1
 isort==5.13.2
 lazy-object-proxy==1.10.0
 mccabe==0.7.0
 platformdirs==4.1.0
 pylint==3.0.3
+python-dateutil==2.8.2
 python-dotenv==1.0.0
 pytz==2023.3.post1
 six==1.16.0
