@@ -1,10 +1,12 @@
 import re
+from validate_docbr import CPF
 
 def validate_name(value):
     return value.isalpha()
 
 def validate_cpf(value):
-    return len(value) == 11
+    cpf = CPF()
+    return cpf.validate(value)
 
 def validate_rg(value):
     return len(value) == 9
