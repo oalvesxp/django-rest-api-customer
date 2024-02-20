@@ -6,7 +6,7 @@ django.setup()
 from faker import Faker
 from validate_docbr import CPF
 import random
-from api.apps.customers.models import Customer
+from apps.customers.models import Customer
 
 def create_register(value):
     fake = Faker('pt_BR')
@@ -20,7 +20,7 @@ def create_register(value):
         cpf = cpf.generate()
         rg = '{}{}{}{}'.format(random.randrange(10, 99),random.randrange(100, 999),random.randrange(100, 999),random.randrange(0, 9))
         celphone = "{} 9{}-{}".format(random.randrange(10, 21),random.randrange(4000, 9999),random.randrange(4000, 9999))
-        activate = random.choice(True, False)
+        activate = random.choice([True, False])
         
         i = Customer(name=name, email=email, cpf=cpf, rg=rg, celphone=celphone, activate=activate)
         i.save()
