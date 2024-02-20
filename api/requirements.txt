@@ -2,6 +2,7 @@ asgiref==3.7.2
 astroid==3.0.2
 dill==0.3.7
 Django==5.0.1
+django-filter==23.5
 djangorestframework==3.14.0
 Faker==23.2.1
 isort==5.13.2
