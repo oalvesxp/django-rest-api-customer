@@ -11,7 +11,7 @@ class Customers(admin.ModelAdmin):
         'activate',
     )
     list_display_links = ('id', 'name',)
-    search_fields = ('name',)
+    search_fields = ('name', 'cpf',)
     list_filter = ('activate',)
     list_editable = ('activate',)
     list_per_page = 10
