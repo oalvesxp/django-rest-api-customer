@@ -15,5 +15,6 @@ class Customers(admin.ModelAdmin):
     list_filter = ('activate',)
     list_editable = ('activate',)
     list_per_page = 10
+    ordering = ('name',)
 
 admin.site.register(Customer, Customers)
